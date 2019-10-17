@@ -1,0 +1,58 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.row1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: auto;
+}
+
+.col1 {
+    float: left;
+    width: 30%;
+}
+
+.col2 {
+    float: left;
+    width: 70%;
+}
+
+.content {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+table, tr, th, td {
+    border: 1px solid lightgrey;
+}
+
+table, th {
+    border-bottom: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+}
+
+.course-item {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .col1 {
+        width: 100%;
+    }
+
+    .col2 {
+        width: 100%;
+    }
+}
