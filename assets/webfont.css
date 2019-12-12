@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Iosevka';
+    font-weight: 400;
+    font-style: normal;
+    src: url('woff/iosevka-ss08-regular.woff') format('woff'), url('ttf/iosevka-ss08-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-weight: 400;
+    font-style: italic;
+    src: url('woff/iosevka-ss08-italic.woff') format('woff'), url('ttf/iosevka-ss08-italic.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Iosevka';
+    font-weight: 700;
+    font-style: normal;
+    src: url('woff/iosevka-ss08-bold.woff') format('woff'), url('ttf/iosevka-ss08-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-weight: 700;
+    font-style: italic;
+    src: url('woff/iosevka-ss08-bolditalic.woff') format('woff'), url('ttf/iosevka-ss08-bolditalic.ttf') format('truetype');
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This is the AMP Boilerplate.">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
+    <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/webfont.css" type="text/css">
+    <style amp-custom>
+        html {
+            font-family: "Iosevka", monospace;
+            cursor: default;
+            line-height: 1.5;
+            tab-size: 4;
+            -webkit-tap-highlight-color: transparent;
+            word-break: break-word;
+        }
+
+        header {
+            color: white;
+            background-color: black;
+        }
+
+        .container {
+            max-width: 35rem;
+            margin: 0 auto;
+            padding: 1.45rem 1.0875rem;
+        }
+
+        .headline {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: lowercase;
+            margin: 0;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .title {
+            position: relative;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 1.5ch;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .title::before {
+             position: absolute;
+             left: -1.5ch;
+             content: ">";
+             color: rgb(192, 192, 192);
+         }
+
+        .subtitle {
+            color: rgb(192, 192, 192);
+            font-weight: 400;
+        }
+
+        .link {
+            color: currentcolor;
+            text-decoration: underline;
+        }
+
+        .list {
+            list-style-type: none;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 1.5ch;
+            padding: 0;
+        }
+
+        .list-item {
+            position: relative;
+        }
+
+        .list-item::before {
+            content: "*";
+            position: absolute;
+            left: -1.5ch;
+            color: rgb(192, 192, 192);
+        }
+    </style>
+    <script>
+        $( document ).ready(function() {
+            $.ajax({
+                type: 'GET',
+                url: 'https://wakatime.com/share/@simon/42e7d689-4999-420e-8d00-d59653d35e32.json',
+                dataType: 'jsonp',
+                success: function (response) {
+                    const languagesList = document.getElementById('languages-list');
+                    let list = response.data;
+                    for (let language of list) {
+                        const item = document.createElement("li");
+                        item.className = "list-item";
+                        item.innerHTML = `${language['name']} (${language['percent']}%)`;
+                        languagesList.appendChild(item);
+                    }
+                },
+            });
+        });
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link rel="canonical" href=".">
+    <title>Simon</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Webpage",
+            "url": "https://cuong.wtf",
+            "name": "Simon Pham",
+            "headline": "Simon Pham",
+            "description": "Simon Pham's personal website",
+            "mainEntityOfPage": {
+                "@type": "Simon Pham",
+                "@id": "https://cuong.wtf"
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="headline"><a class="headline" href="#">#!/SimonPham</a></h1>
+    </div>
+</header>
+<div class="container">
+    <section>
+        <h2 class="title">About <small class="subtitle">(Location: Ho Chi Minh City, Vietnam)</small></h2>
+        <p>Mobile developer, specialized in Android (Kotlin), Flutter and React Native.</p>
+        <p>Working as a developer at <a class="link" href="https://www.hasbrain.com" rel="noopener noreferrer" target="_blank">HasBrain</a></p>
+    </section>
+    <section>
+        <h2 class="title">Currently writing <small class="subtitle">(Via <a class="link" href="https://wakatime.com/@simon" rel="noopener noreferrer" target="_blank">WakaTime</a>)</small></h2>
+        <ul class="list" id="languages-list">
+        </ul>
+    </section>
+    <section>
+        <h2 class="title">Links</h2>
+        <ul class="list">
+            <li class="list-item"><a class="link" href="https://github.com/simonpham">GitHub</a></li>
+            <li class="list-item"><a class="link" href="https://linkedin.com/in/simonphamvn">LinkedIn</a></li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>
