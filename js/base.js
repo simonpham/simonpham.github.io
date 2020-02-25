@@ -1,6 +1,6 @@
 $.ajax({
     type: 'GET',
-    url: 'https://wakatime.com/share/@simon/42e7d689-4999-420e-8d00-d59653d35e32.json',
+    url: 'https://wakatime.com/share/@simon/67d11a16-44ef-45ca-be0a-e35b2b235d8f.json',
     dataType: 'jsonp',
     success: function (response) {
         $(document).ready(function () {
