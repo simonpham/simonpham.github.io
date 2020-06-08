@@ -118,6 +118,11 @@ header {
     /*text-align: center;*/
 }
 
+#bio {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .content {
     width: 100%;
     margin-left: 2rem;
