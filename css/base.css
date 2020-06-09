@@ -147,7 +147,7 @@ header {
 
 .project-column {
     width: 50%;
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
 }
 
 .project-image {
@@ -164,18 +164,18 @@ header {
     position: relative;
     height: fit-content;
     width: 100%;
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
 }
 
 .project-container:hover .project-image {
     opacity: 0.3;
 }
 
-.project-container:hover .project-title {
+.project-container:hover .project-info {
     opacity: 1;
 }
 
-.project-title {
+.project-info {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
@@ -184,6 +184,10 @@ header {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.project-title {
+    font-size: 1.25rem;
 }
 
 @media screen and (max-width: 768px) {
