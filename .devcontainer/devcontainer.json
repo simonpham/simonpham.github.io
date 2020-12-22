@@ -1,0 +1,4 @@
+{
+  "image": "spurin/hexo",
+  "forwardPorts": [4000]
+}
